@@ -166,9 +166,212 @@ def eta(first_stop, second_stop, route_map):
                 break
     return time
 
+social_graph = {
+    "@bongolpoc":{"first_name":"Joselito",
+                  "last_name":"Olpoc",
+                  "following":[
+                  ]
+    },
+    "@joaquin":  {"first_name":"Joaquin",
+                  "last_name":"Gonzales",
+                  "following":[
+                      "@chums","@jobenilagan"
+                  ]
+    },
+    "@chums" : {"first_name":"Matthew",
+                "last_name":"Uy",
+                "following":[
+                    "@bongolpoc","@miketan","@rudyang","@joeilagan"
+                ]
+    },
+    "@jobenilagan":{"first_name":"Joben",
+                   "last_name":"Ilagan",
+                   "following":[
+                    "@eeebeee","@joeilagan","@chums","@joaquin"
+                   ]
+    },
+    "@joeilagan":{"first_name":"Joe",
+                  "last_name":"Ilagan",
+                  "following":[
+                    "@eeebeee","@jobenilagan","@chums"
+                  ]
+    },
+    "@eeebeee":  {"first_name":"Elizabeth",
+                  "last_name":"Ilagan",
+                  "following":[
+                    "@jobenilagan","@joeilagan"
+                  ]
+    },
+}
+
+print(relationship_status("@eeebeee","@jobenilagan",social_graph)) #friends
+print(relationship_status("@chums","@bongolpoc",social_graph)) #followed by
+print(relationship_status("@bongolpoc","@chums",social_graph)) #follower
+print(relationship_status("@bongolpoc","@eeebeee",social_graph)) #no relationship
+
+
+board1 = [
+['X','X','O'],
+['O','X','O'],
+['O','','X'],
+]
+
+board2 = [
+['X','X','O'],
+['O','X','O'],
+['','O','X'],
+]
+
+board3 = [
+['O','X','O'],
+['','O','X'],
+['X','X','O'],
+]
+
+board4 = [
+['X','X','X'],
+['O','X','O'],
+['O','','O'],
+]
+
+board5 = [
+['X','X','O'],
+['O','X','O'],
+['X','','O'],
+]
+
+board6 = [
+['X','X','O'],
+['O','X','O'],
+['X','',''],
+]
+
+board7 = [
+['X','X','O','O'],
+['O','X','O','O'],
+['X','O','X','X'],
+['O','','','X'],
+]
+
+print(tic_tac_toe(board1))
+
+legs = {
+     ("upd","admu"):{
+         "travel_time_mins":10
+     },
+     ("admu","dlsu"):{
+         "travel_time_mins":35
+     },
+     ("dlsu","upd"):{
+         "travel_time_mins":55
+     }
+}
+
+print(eta("admu", "upd", legs))
 
 # In[ ]:
+social_graph = {
+    "@bongolpoc":{"first_name":"Joselito",
+                  "last_name":"Olpoc",
+                  "following":[
+                  ]
+    },
+    "@joaquin":  {"first_name":"Joaquin",
+                  "last_name":"Gonzales",
+                  "following":[
+                      "@chums","@jobenilagan"
+                  ]
+    },
+    "@chums" : {"first_name":"Matthew",
+                "last_name":"Uy",
+                "following":[
+                    "@bongolpoc","@miketan","@rudyang","@joeilagan"
+                ]
+    },
+    "@jobenilagan":{"first_name":"Joben",
+                   "last_name":"Ilagan",
+                   "following":[
+                    "@eeebeee","@joeilagan","@chums","@joaquin"
+                   ]
+    },
+    "@joeilagan":{"first_name":"Joe",
+                  "last_name":"Ilagan",
+                  "following":[
+                    "@eeebeee","@jobenilagan","@chums"
+                  ]
+    },
+    "@eeebeee":  {"first_name":"Elizabeth",
+                  "last_name":"Ilagan",
+                  "following":[
+                    "@jobenilagan","@joeilagan"
+                  ]
+    },
+}
 
+print(relationship_status("@eeebeee","@jobenilagan",social_graph)) #friends
+print(relationship_status("@chums","@bongolpoc",social_graph)) #followed by
+print(relationship_status("@bongolpoc","@chums",social_graph)) #follower
+print(relationship_status("@bongolpoc","@eeebeee",social_graph)) #no relationship
+
+
+board1 = [
+['X','X','O'],
+['O','X','O'],
+['O','','X'],
+]
+
+board2 = [
+['X','X','O'],
+['O','X','O'],
+['','O','X'],
+]
+
+board3 = [
+['O','X','O'],
+['','O','X'],
+['X','X','O'],
+]
+
+board4 = [
+['X','X','X'],
+['O','X','O'],
+['O','','O'],
+]
+
+board5 = [
+['X','X','O'],
+['O','X','O'],
+['X','','O'],
+]
+
+board6 = [
+['X','X','O'],
+['O','X','O'],
+['X','',''],
+]
+
+board7 = [
+['X','X','O','O'],
+['O','X','O','O'],
+['X','O','X','X'],
+['O','','','X'],
+]
+
+print(tic_tac_toe(board1))
+
+legs = {
+     ("upd","admu"):{
+         "travel_time_mins":10
+     },
+     ("admu","dlsu"):{
+         "travel_time_mins":35
+     },
+     ("dlsu","upd"):{
+         "travel_time_mins":55
+     }
+}
+
+print(eta("admu", "upd", legs))
 
 
 
